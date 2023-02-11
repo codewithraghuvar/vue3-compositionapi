@@ -1,6 +1,6 @@
 <template>
     <div class="comp-container">
-      <h1>Reactive Component</h1>
+      <h1>vmodel Component</h1>
       <div>First Name: {{firstName}}</div>
       <div>last Name: {{lastName}}</div>
       <div>hero Name: {{heroName}}</div>
@@ -10,7 +10,7 @@
   <script>
   import { reactive , toRefs} from 'vue'
   export default {
-    name: 'reactive-component',
+    name: 'vmodel-component',
     setup(){
         const state = reactive({
             firstName: 'Raghuvar',

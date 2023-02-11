@@ -1,17 +1,23 @@
 <template>   
   <refComponent/>
   <reactiveComponent/>
+  <methodComponent/>
+  <vmodelComponent/>
 </template>
 
 <script>
 import refComponent from './components/ref-component.vue'
 import reactiveComponent from './components/reactive-component.vue'
+import methodComponent from './components/method-component.vue';
+import vmodelComponent from './components/vmodel-component.vue';
 
 export default {
   name: 'App',
   components: {
     refComponent,
-    reactiveComponent
+    reactiveComponent,
+    methodComponent,
+    vmodelComponent
   }
 }
 </script>
