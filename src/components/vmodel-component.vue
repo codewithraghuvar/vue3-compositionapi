@@ -1,31 +1,29 @@
 <template>
     <div class="comp-container">
       <h1>vmodel Component</h1>
-      <div>First Name: {{firstName}}</div>
-      <div>last Name: {{lastName}}</div>
-      <div>hero Name: {{heroName}}</div>
+      <div>
+       <div> Firstname : <input type="text" placeholder="First Name" v-model="firstName"/></div>
+       <div>  Lastname: <input type="text" placeholder="Last Name" v-model="lastName"/></div>
+       <div> Country: <input type="text" placeholder="Country" v-model="country"/></div>
+
+      </div>
     </div>
   </template>
   
   <script>
-  import { reactive , toRefs} from 'vue'
+  import { reactive, ref, toRefs} from 'vue'
   export default {
     name: 'vmodel-component',
     setup(){
+        const country = ref('')
         const state = reactive({
-            firstName: 'Raghuvar',
-            lastName: 'Visht',
-            heroName: 'heroname'
+            firstName: '',
+            lastName: ''        
         })
 
-        setTimeout(() => {
-            state.firstName = 'Anshul'
-            state.lastName = 'Singh'
-
-        }, 2000);
-        
         return {
-            ...toRefs(state)
+          country,
+          ...toRefs(state)
         }
     }
   }

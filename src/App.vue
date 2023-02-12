@@ -1,8 +1,8 @@
-<template>   
-  <refComponent/>
-  <reactiveComponent/>
-  <methodComponent/>
+<template>  
   <vmodelComponent/>
+  <methodComponent/>
+  <refComponent/>
+  <reactiveComponent/>  
 </template>
 
 <script>
